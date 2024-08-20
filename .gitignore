@@ -28,6 +28,8 @@ JavaOOP062024.iml
 !selenium.avi
 out/
 .idea/
+*.png
+exports/
 
 
 

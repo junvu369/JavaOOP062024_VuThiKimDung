@@ -1,4 +1,4 @@
 # JavaOOP062024
 ## Bài tập JavaOOP
 
-***Update JDK cho phù hợp sau khi mở project***
+Upload lần 1 - 22/08/2024: Bài tập JAVA OOP 1 và 2

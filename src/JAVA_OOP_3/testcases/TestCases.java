@@ -40,7 +40,7 @@ public class TestCases extends BaseTest {
         if (url2 == getUrl2()) {
             System.out.println("Show the message: Log in successfully");
         } else {
-            System.out.println("Show the message: Log in unsuccessfully");
+            System.out.println("Show the message: Invalid Login credentials, then clear the email and password automatically");
         }
         //Close driver
         BaseTest.closeDriver();
@@ -72,7 +72,7 @@ public class TestCases extends BaseTest {
         if (url2 == getUrl2()) {
             System.out.println("Show the message: Log in successfully");
         } else {
-            System.out.println("Show the message: Log in unsuccessfully");
+            System.out.println("Show the message: Invalid Login credentials, then clear the email and password automatically");
         }
         //In Dashboard, go to Product.
         System.out.println("Step 4: From the Dashboard, Tap on Product inside the Main Menu in the left side of screen");

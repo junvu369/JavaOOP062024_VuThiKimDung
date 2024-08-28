@@ -1,12 +1,19 @@
 package JAVA_OOP_3.common;
 
-public class BaseTest {
+public class BaseTest extends Constants {
 
-    public void createDriver(){
 
+    public static void createDriver() {
+        Constants.GetInfo();
     }
 
-    public void closeDriver(){
+    public static void closeDriver() {
+        Constants c = new Constants();
+        System.out.println("Closed browser: " + c.getBrowser());
+    }
 
+    public static void main(String[] args) {
+        BaseTest.createDriver();
+        BaseTest.closeDriver();
     }
 }

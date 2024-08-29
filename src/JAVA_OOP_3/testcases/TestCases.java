@@ -4,12 +4,13 @@ import JAVA_OOP_3.common.BaseTest;
 
 public class TestCases extends BaseTest {
 
+
     static String url1 = "https://cms.anhtester.com/login";
     static String email = "admin@example.com";
     static String password = "123456";
     private String url2;
-    private boolean checkFieldsEmpty;
-    private boolean checkDataInFieldsValid = true;
+    private boolean fieldsEmpty;
+    private boolean dataInFieldsValid = true;
 
     //(1) Test case "Login"
 
@@ -38,23 +39,25 @@ public class TestCases extends BaseTest {
 
         //Check if the Login is successful or not
         setUrl2("https://cms.anhtester.com/admin");
+
         if (url2 == getUrl2()) {
             System.out.println("Show the message: Log in successfully");
         } else {
             System.out.println("Show the message: Invalid Login credentials, then clear the email and password automatically");
         }
+
         //Close driver
         BaseTest.closeDriver();
     }
 
     // (2) Test case "Add Category"
 
-    public boolean isCheckFieldsEmpty() {
-        return checkFieldsEmpty;
+    public boolean isFieldsEmpty() {
+        return fieldsEmpty;
     }
 
-    public boolean isCheckDataInFieldsValid() {
-        return checkDataInFieldsValid;
+    public boolean isDataInFieldsValid() {
+        return dataInFieldsValid;
     }
 
     public void AddCategory() {
@@ -95,7 +98,7 @@ public class TestCases extends BaseTest {
         System.out.println("Step 8: Tap on Save button");
 
         //Check if the adding category is successful or not
-        if ((isCheckFieldsEmpty() == false) && (isCheckDataInFieldsValid() == true)){
+        if ((isFieldsEmpty() == false) && (isDataInFieldsValid() == true)) {
             System.out.println("Show the message: Create the new category successfully");
         } else {
             System.out.println("Show the message in each field: Please fill out this field.");

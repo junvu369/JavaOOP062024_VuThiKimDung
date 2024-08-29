@@ -9,6 +9,7 @@ public class TestCases extends BaseTest {
     static String password = "123456";
     private String url2;
     private boolean checkFieldsEmpty;
+    private boolean checkDataInFieldsValid = true;
 
     //(1) Test case "Login"
 
@@ -52,6 +53,10 @@ public class TestCases extends BaseTest {
         return checkFieldsEmpty;
     }
 
+    public boolean isCheckDataInFieldsValid() {
+        return checkDataInFieldsValid;
+    }
+
     public void AddCategory() {
         //Create the driver
         System.out.println("Open the browser:");
@@ -90,7 +95,7 @@ public class TestCases extends BaseTest {
         System.out.println("Step 8: Tap on Save button");
 
         //Check if the adding category is successful or not
-        if (isCheckFieldsEmpty() == false) {
+        if ((isCheckFieldsEmpty() == false) && (isCheckDataInFieldsValid() == true)){
             System.out.println("Show the message: Create the new category successfully");
         } else {
             System.out.println("Show the message in each field: Please fill out this field.");

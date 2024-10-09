@@ -1,7 +1,7 @@
 package JAVA_OOP_1;
 
 public class NhanVien {
-    String name = "Nguyễn Văn An";
+    public String name;
     int age = 33;
     int experience = 3;
 

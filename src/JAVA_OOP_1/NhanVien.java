@@ -1,26 +1,31 @@
 package JAVA_OOP_1;
 
 public class NhanVien {
+
+    //Khởi tạo các biến (không cần có tham số cụ thể)
+    public String employeeID;
     public String name;
-    int age = 33;
-    int experience = 3;
+    public int age;
+    public String phone;
+    public String address;
 
-    public static String jobTitle = "Manual Tester";
-    static String companyName = "Dragon Fly ., Ltd Company";
-    static String address = "Cầu Giấy, Hà Nội";
 
-    public void getInfoEmployee(){
-        System.out.println("Thông tin nhân viên là:");
+    //Tạo hàm xây dựng dựa trên các biến bên trên
+    public NhanVien(String employeeID, String name, int age, String phone, String address) {
+        this.employeeID = employeeID;
+        this.name = name;
+        this.age = age;
+        this.phone = phone;
+        this.address = address;
     }
 
-    public static void main(String[] args) {
-        NhanVien nhanVien = new NhanVien();
-        nhanVien.getInfoEmployee();
-        System.out.println(nhanVien.name);
-        System.out.println(nhanVien.age);
-        System.out.println(nhanVien.experience);
-        System.out.println(jobTitle);
-        System.out.println(companyName);
-        System.out.println(address);
+    //Tạo ra các hàm in thông tin
+    public void showInfo() {
+        System.out.println("EmployeeID: " + employeeID);
+        System.out.println("Employee's name: " + name);
+        System.out.println("Employee's age: " + age);
+        System.out.println("Phone No.: " + phone);
+        System.out.println("Address: " + address);
     }
+
 }

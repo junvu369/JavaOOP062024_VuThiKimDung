@@ -3,14 +3,11 @@ package JAVA_OOP_1;
 public class ThongTin {
 
     public static void main(String[] args) {
-        NhanVien nhanVien = new NhanVien();
-        nhanVien.getInfoEmployee();
-        System.out.println(nhanVien.name);
-        System.out.println(nhanVien.experience);
-        System.out.println(nhanVien.age);
+        NhanVien nhanVien1 = new NhanVien("NV01","Nguyễn Bình An",33,"0123456789","Hai Bà Trưng, Hà Nội");
+        NhanVien nhanVien2 = new NhanVien("NV02","Nguyễn Anh Minh",32,"0112233445","Thanh Xuân, Hà Nội");
 
-        System.out.println(NhanVien.jobTitle);
-        System.out.println(NhanVien.companyName);
-        System.out.println(NhanVien.address);
+        nhanVien1.showInfo();
+        System.out.println("============================");
+        nhanVien2.showInfo();
     }
 }

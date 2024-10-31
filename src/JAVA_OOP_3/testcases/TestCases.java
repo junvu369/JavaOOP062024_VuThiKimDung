@@ -22,13 +22,12 @@ public class TestCases extends BaseTest {
         this.url2 = url2;
     }
 
-    public void Login() {
+    public void testLogin() {
         //Create the driver
-        System.out.println("Open the browser:");
-        BaseTest.createDriver();
+        createDriver();
 
         //Go to URL
-        System.out.println("Step 1: Go to URL: " + url1);
+        System.out.println("Step 1: Navigate to URL: " + url1);
 
         //Input Email and Password
         System.out.println("Step 2.1: Input email: " + email);
@@ -45,9 +44,10 @@ public class TestCases extends BaseTest {
         } else {
             System.out.println("Show the message: Invalid Login credentials, then clear the email and password automatically");
         }
+        System.out.println("Verify menu Dashboard is displayed");
 
         //Close driver
-        BaseTest.closeDriver();
+        closeDriver();
     }
 
     // (2) Test case "Add Category"
@@ -60,13 +60,12 @@ public class TestCases extends BaseTest {
         return dataInFieldsValid;
     }
 
-    public void AddCategory() {
+    public void testAddCategory() {
         //Create the driver
-        System.out.println("Open the browser:");
-        BaseTest.createDriver();
+        createDriver();
 
         //Go to URL
-        System.out.println("Step 1: Go to URL: " + url1);
+        System.out.println("Step 1: Navigate to URL: " + url1);
 
         //Input Email and Password
         System.out.println("Step 2.1: Input email: " + email);
@@ -103,18 +102,19 @@ public class TestCases extends BaseTest {
         } else {
             System.out.println("Show the message in each field: Please fill out this field.");
         }
+        System.out.println("Verify new category added successfully");
+        System.out.println("Verify the new category information is correct");
 
         //Close the driver
-        BaseTest.closeDriver();
+        closeDriver();
     }
 
     public static void main(String[] args) {
         TestCases tc = new TestCases();
         System.out.println("Run test cases for Login");
-        tc.Login();
+        tc.testLogin();
         System.out.println("===========================");
         System.out.println("Run test cases for Adding Category");
-        tc.AddCategory();
+        tc.testAddCategory();
     }
-
 }
